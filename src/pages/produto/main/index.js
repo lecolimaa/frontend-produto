@@ -14,7 +14,7 @@ export default class Main extends Component {
     }
  
     componentDidMount() {
-        fetch(`${process.env.REACT_APP_API_URL}`)
+        fetch(`https://backend-produtoo.herokuapp.com/produto${id}`)
             .then(produto =>
                 produto.json().then(produto => this.setState({ produto }))
             )
@@ -46,7 +46,7 @@ export default class Main extends Component {
                                 <th scope="row">{produto.id}</th>
                                 <td>{produto.nome}</td>
                                 <td>{produto.descricao}</td>
-                                <td>{produto.precos}</td>
+                                <td>{produto.precos.String}</td>
                                 <td>{produto.qtd_estoque }</td>
                                 <td>{produto.ativo ? "Sim" : "Não"}</td>
                                 <td> <Link to={`/produtos/${produto.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>

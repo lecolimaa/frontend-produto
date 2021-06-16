@@ -82,7 +82,7 @@ class CriarProduto extends Component {
                             />
                         </div>
                         <div className="usuario-insert">
-                            <label htmlFor="qtd_estoque">Quantida em Estoque </label>
+                            <label htmlFor="qtd_estoque">Quantidade em Estoque </label>
                             <br />
                             <input
                                 type="text"
@@ -140,7 +140,7 @@ class CriarProduto extends Component {
     };
  
     handleSubmit = event => {
-        fetch("${process.env.REACT_APP_API_URL}${id}", {
+        fetch("https://backend-produtoo.herokuapp.com/produto", {
             method: "post",
             body: JSON.stringify(this.state.usuario),
             headers: {

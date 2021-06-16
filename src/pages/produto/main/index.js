@@ -14,7 +14,7 @@ export default class Main extends Component {
     }
  
     componentDidMount() {
-        fetch("https://backend-produtoo.herokuapp.com/produtos")
+        fetch("https://backend-produtoo.herokuapp.com/produto")
             .then(produto =>
                 produto.json().then(produto => this.setState({ produto }))
             )

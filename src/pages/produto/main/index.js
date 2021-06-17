@@ -46,7 +46,7 @@ export default class Main extends Component {
                                 <th scope="row">{produto.id}</th>
                                 <td>{produto.nome}</td>
                                 <td>{produto.descricao}</td>
-                                <td>{produto.precos}</td>
+                                <td>{produto.preco}</td>
                                 <td>{produto.qtd_estoque }</td>
                                 <td>{produto.ativo ? "Sim" : "Não"}</td>
                                 <td> <Link to={`/produtos/${produto.id}`}> <button type="button" class="btn btn-primary">Detalhes</button> </Link> </td>
